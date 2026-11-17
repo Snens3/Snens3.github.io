@@ -1,0 +1,5 @@
+.krabbe {
+    width: 400px;
+    animation: drehen 5s linear infinite;
+    transform-origin: center center;
+}
