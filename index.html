@@ -1,70 +1,32 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Testseite</title>
+<style>
+body{
+    margin:0;
+    background:black;
+    overflow:hidden;
+}
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1e293b;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 50px;
-        }
+.krabbe{
+    position:absolute;
+    width:300px;
+    left:50%;
+    top:50%;
+    margin-left:-150px;
+    margin-top:-150px;
+    animation:
+        drehen 1s linear infinite,
+        schweben 4s ease-in-out infinite;
+}
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
+@keyframes drehen{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
 
-        h1 {
-            color: #38bdf8;
-        }
+@keyframes schweben{
+    0%{top:40%;}
+    50%{top:60%;}
+    100%{top:40%;}
+}
+</style>
 
-        button {
-            background-color: #38bdf8;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 6px;
-        }
-
-        button:hover {
-            background-color: #0ea5e9;
-        }
-
-        #ausgabe {
-            margin-top: 20px;
-            font-size: 20px;
-            color: #4ade80;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>Willkommen auf meiner GitHub Page</h1>
-
-        <p>Dies ist eine Testseite mit HTML, CSS und JavaScript.</p>
-
-        <button onclick="zeigeText()">
-            Klick mich
-        </button>
-
-        <div id="ausgabe"></div>
-    </div>
-
-    <script>
-        function zeigeText() {
-            document.getElementById("ausgabe").innerText =
-                "Die Seite funktioniert erfolgreich!";
-        }
-    </script>
-
-</body>
-</html>
+<img src="krabbe.jpg" class="krabbe">
