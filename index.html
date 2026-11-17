@@ -1,32 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drehende Krabbe</title>
+<link rel="stylesheet" href="style.css">
+
 <style>
-body{
-    margin:0;
-    background:black;
-    overflow:hidden;
+body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
 }
 
-.krabbe{
-    position:absolute;
-    width:300px;
-    left:50%;
-    top:50%;
-    margin-left:-150px;
-    margin-top:-150px;
+.krabbe {
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
     animation:
         drehen 1s linear infinite,
         schweben 4s ease-in-out infinite;
 }
 
-@keyframes drehen{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
+@keyframes drehen {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-@keyframes schweben{
-    0%{top:40%;}
-    50%{top:60%;}
-    100%{top:40%;}
+@keyframes schweben {
+    0% {
+        top: 40%;
+    }
+    50% {
+        top: 60%;
+    }
+    100% {
+        top: 40%;
+    }
 }
 </style>
 
-<img src="krabbe.png" class="krabbe">
+</head>
+<body>
+
+<img src="krabbe.png" alt="Krabbe mit Fisch" class="krabbe">
+
+</body>
+</html>
